@@ -10,11 +10,15 @@ function App(){
     const handleKeyDown = (e) => {
       const { key, code, keyCode } = e;
       console.log(key);
+      if(key === 'Enter') {console.log(value); setValue(eval(value))}
+      else if(key !== ('Alt' || 'Tab')) setValue(value + key)
       setKeyPressed({ key, code, keyCode });
+      e.preventDefault(); 
+
     };
 
     function handle(event){
-        console.log(event.target)
+        console.log(event.name)
         if(event.target.value === '=') {
             setValue(eval(value))
         }
@@ -28,12 +32,6 @@ function App(){
 
     return (
         <div className="App" onKeyDown={handleKeyDown} tabIndex="0">
-          <h1>Press a key</h1>
-          <h2>
-            You pressed: {keyPressed.key} which has code {keyPressed.code} and
-            keycode is equal to {keyPressed.keyCode} which is to be used to make
-            functional UIs
-          </h2>
           <nav className="navbar navbar-expand-lg navbar-light bg-light">
             <a className="navbar-brand" style={{color: "black"}} href="#">Calculator</a>
           </nav>
