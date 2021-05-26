@@ -1,3 +1,5 @@
+Deployed at: calculator-2a2c8.web.app using firebase
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
