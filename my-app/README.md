@@ -1,4 +1,5 @@
-Deployed using firebase at: calculator-2a2c8.web.app 
+Deployed using firebase at: calculator-2a2c8.web.app
+
 
 # Getting Started with Create React App
 
